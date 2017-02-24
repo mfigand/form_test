@@ -1,0 +1,97 @@
+
+<!doctype html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Code Challenge Meelowlab</title>
+      <link rel="icon" href="assets/images/heart.png">
+      <link rel="author" href="https://www.linkedin.com/in/manuelfigueroaandrade">
+
+      <link rel="stylesheet" href="assets/stylesheets/style.css">
+
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+      <!-- JQuery-->
+      <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  </head>
+
+  <body>
+
+    <div class="form_container row">
+      
+        <div class="wrapper col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+        
+            <h2>¡¡PARTICIPA!!</h2>
+            <p class="text_form">Es muy facil. Solo tienes que subir una foto o video en instagram contando el momento más romántico que has vivido, utiliza el hashtag #SeHacerlo</p>
+            <div class="group_form" id="group_form">
+
+              <form class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-10 col-sm-10 col-md-10 col-lg-10"  onsubmit="return handleSubmit(this)" id="form">
+                  <div class="form-group">
+                    <div>
+                      <input class="col-xs-4 col-sm-4 col-md-4 col-lg-4" type="text" class="form-control" id="name" name="name" placeholder="Nombre" required>
+                      <input class="col-xs-6 col-sm-7 col-md-7 col-lg-7" type="text" class="form-control" id="lastName" name="lastName" placeholder="Apellidos" required>
+                    </div>
+                      
+                    <div>
+                      <input class="col-xs-6 col-sm-7 col-md-7 col-lg-7" type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                      <input class="col-xs-4 col-sm-4 col-md-4 col-lg-4" type="tel" class="form-control" id="tel" name="tel" placeholder="Teléfono" required>
+                    </div>
+                      
+                    <div class="text-left">
+                      <label class="text_form col-md-12">Fecha de nacimiento:</label>
+                    </div>
+
+                    <div>
+                      <input class="col-xs-2 col-sm-2 col-md-2 col-lg-2" type="number" min="1" max="31" class="form-control" id="day_birth" name="day_birth" placeholder="Día" required>
+                      <input class="col-xs-2 col-sm-2 col-md-2 col-lg-2" type="number" min="1" max="12" class="form-control" id="month_birth" name="month_birth" placeholder="Mes" required>
+                      <input class="col-xs-2 col-sm-2 col-md-2 col-lg-2" type="number" class="form-control" id="year_birth" name="year_birth" placeholder="Año" required>
+                      <input class="col-xs-3 col-sm-4 col-md-4 col-lg-4" type="number" class="form-control" id="cp" name="cp" placeholder="Código Postal" required>
+                    </div>
+
+                    <div>
+                      <input class="col-xs-12 col-sm-12 col-md-12 col-lg-12" type="text" class="form-control" id="instagram_user" name="instagram_user" placeholder="Usuario Instagram" required>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-left">
+                       <input type="checkbox" id="condiciones" name="condiciones" required/> <label id="terms" for="condiciones">Acepto la Política de Privacidad y Condiciones de Uso del sorteo</label>
+                    </div>
+    
+
+                  </div>
+
+                  <div class="text-left" style="padding:10px;">
+                    <input class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn btn-default" id="submit_button" type="submit" value="ENVIAR">
+                  </div>
+
+                  <div class="text-left" id="panelButton" hidden>
+                    <input class="panelButton col-xs-12 col-sm-12 col-md-12 col-lg-12 btn btn-danger" onclick=" getFromDB()" value="Mostrar Panel">
+                  </div>                  
+
+               </form>
+              
+            </div>
+          
+        </div>
+
+        <div id="export_button" hidden>
+            <button class="export_button btn btn-default" ><a href="#" id ="export" role='button'>Click On This Link To Export The Table Data into a CSV File</a></button>
+        </div>
+      
+    </div>
+
+    <script src="assets/javascripts/form_test.js" ></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="assets/javascripts/exportTable.js" ></script>
+
+  </body>
+
+</html>
