@@ -38,9 +38,7 @@ $(document).ready(function () {
                     });
                 }
 
-                //------------------------------------------------------------
-                // Helper Functions 
-                //------------------------------------------------------------
+
                 // Format the output so it has the appropriate delimiters
                 function formatRows(rows){
                     return rows.get().join(tmpRowDelim)

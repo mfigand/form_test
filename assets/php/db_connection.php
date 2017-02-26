@@ -1,9 +1,9 @@
 <?php
 
 //Data Base Connection
-$user = 'root';
-$password = 'root';
-$db = 'meelowlab_db';
+$user = 'c1data';
+$password = 'meelowlab2017';
+$db = 'c1data5';
 $host = 'localhost';
 
 $connect = mysqli_connect($host,$user,$password,$db);
